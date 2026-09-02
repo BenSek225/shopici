@@ -29,7 +29,7 @@ export const ProductGallery: React.FC<ProductGalleryProps> = ({
           <button
             key={`${src}-${index}`}
             onClick={() => setSelectedIndex(index)}
-            className={`relative h-20 min-w-16 flex-shrink-0 overflow-hidden border-2 transition ${
+            className={`relative h-20 min-w-16 shrink-0 overflow-hidden border-2 transition ${
               selectedIndex === index
                 ? 'border-primary ring-2 ring-primary/20'
                 : 'border-transparent hover:border-border'

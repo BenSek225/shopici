@@ -6,7 +6,7 @@
 
 import React, { useEffect } from 'react'
 import { Select, Input } from '@/components/ui'
-import { ABIDJAN_ZONES } from '@/lib/data/delivery-zones'
+import { ABIDJAN_ZONES, DELIVERY_CITIES } from '@/lib/data/delivery-zones'
 import { formatPrice } from '@/lib/utils'
 
 interface DeliveryZoneSelectorProps {
@@ -26,11 +26,13 @@ export const DeliveryZoneSelector: React.FC<DeliveryZoneSelectorProps> = ({
 }) => {
   const isAbidjan = city.toLowerCase().trim() === 'abidjan'
   
-  // Options de ville
+  // Options de ville (toutes les villes de CI)
   const cityOptions = [
     { value: '', label: 'Sélectionner une ville' },
-    { value: 'Abidjan', label: 'Abidjan' },
-    { value: 'Hors Abidjan', label: 'Autre ville (Hors Abidjan)' }
+    ...DELIVERY_CITIES.map(c => ({
+      value: c.name,
+      label: c.name
+    }))
   ]
   
   // Options de communes (si Abidjan)

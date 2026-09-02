@@ -12,7 +12,7 @@ import { Header, Footer, WhatsAppButton } from '@/components/layout'
 import { CartDrawer } from '@/components/cart'
 import { ProductCard } from '@/components/products'
 import { Toast } from '@/components/ui'
-import { useCart } from '@/lib/hooks'
+import { useCart } from '@/lib/contexts/CartContext'
 import { products, categories } from '@/lib/data'
 import { SITE_CONFIG } from '@/lib/constants/config'
 import { generateWhatsAppLink, generateSimpleWhatsAppMessage } from '@/lib/utils'
@@ -23,7 +23,7 @@ export default function HomePage() {
   
   return (
     <>
-      <Header cartCount={cart.count} onCartClick={() => cart.setIsOpen(true)} />
+      <Header />
       
       <main>
         {/* Hero Section */}

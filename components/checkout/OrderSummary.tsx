@@ -44,7 +44,7 @@ export const OrderSummary: React.FC<OrderSummaryProps> = ({
           return (
             <div key={`${item.product.slug}-${item.variant?.id || 'default'}-${index}`} className="flex gap-3">
               {/* Image miniature */}
-              <div className="relative h-16 w-14 flex-shrink-0 overflow-hidden rounded-sm bg-muted">
+              <div className="relative h-16 w-14 shrink-0 overflow-hidden rounded-sm bg-muted">
                 <Image
                   src={itemImage}
                   alt={itemName}

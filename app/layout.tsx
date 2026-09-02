@@ -1,11 +1,12 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
+import { SmoothScroll } from '@/components/layout/SmoothScroll'
+import { CartProvider } from '@/lib/contexts/CartContext'
 import './globals.css'
 
 export const metadata: Metadata = {
   title: 'SHOPICI — Votre sélection, simplement.',
   description: 'Découvrez les essentiels soins, beauté, bien-être et performance livrés en Côte d’Ivoire.',
-  generator: 'v0.app',
   icons: {
     icon: [
       {
@@ -41,7 +42,10 @@ export default function RootLayout({
   return (
     <html lang="fr" className="bg-background">
       <body className="antialiased">
-        {children}
+        <SmoothScroll />
+        <CartProvider>
+          {children}
+        </CartProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

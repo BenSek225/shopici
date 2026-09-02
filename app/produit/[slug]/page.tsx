@@ -17,7 +17,7 @@ import {
   QuantitySelector
 } from '@/components/products'
 import { Button, Toast } from '@/components/ui'
-import { useCart } from '@/lib/hooks'
+import { useCart } from '@/lib/contexts/CartContext'
 import { findProductBySlug } from '@/lib/data'
 import { generateWhatsAppLink, generateSimpleWhatsAppMessage } from '@/lib/utils'
 import { formatPrice } from '@/lib/utils'
@@ -61,7 +61,7 @@ export default function ProductPage() {
   
   return (
     <>
-      <Header cartCount={cart.count} onCartClick={() => cart.setIsOpen(true)} />
+      <Header />
       
       <main className="mx-auto max-w-7xl px-5 py-10 lg:px-10">
         {/* Breadcrumb */}

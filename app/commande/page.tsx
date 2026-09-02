@@ -8,7 +8,7 @@ import React, { useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { Header, Footer, WhatsAppButton } from '@/components/layout'
 import { CheckoutForm, OrderSummary } from '@/components/checkout'
-import { useCart } from '@/lib/hooks'
+import { useCart } from '@/lib/contexts/CartContext'
 
 export default function CommandePage() {
   const router = useRouter()
@@ -36,7 +36,7 @@ export default function CommandePage() {
   
   return (
     <>
-      <Header cartCount={cart.count} onCartClick={() => cart.setIsOpen(true)} />
+      <Header />
       
       <main className="mx-auto grid max-w-6xl gap-12 px-5 py-12 md:grid-cols-[1fr_.8fr] lg:px-10">
         {/* Formulaire */}

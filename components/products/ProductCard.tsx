@@ -43,7 +43,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
   return (
     <article className="group">
       {/* Image */}
-      <div className="relative aspect-[4/5] overflow-hidden bg-muted">
+      <div className="relative aspect-4/5 overflow-hidden bg-muted">
         <Link href={`/produit/${product.slug}`} className="absolute inset-0 z-0">
           <Image
             src={product.images[0]}

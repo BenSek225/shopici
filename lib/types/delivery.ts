@@ -8,6 +8,12 @@ export interface DeliveryZone {
   price: number
 }
 
+export interface DeliveryCity {
+  id: string
+  name: string
+  hasZones: boolean
+}
+
 export interface DeliveryInfo {
   city: string
   commune?: string

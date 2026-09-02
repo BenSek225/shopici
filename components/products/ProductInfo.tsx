@@ -88,7 +88,7 @@ export const ProductInfo: React.FC<ProductInfoProps> = ({
               <ul className="space-y-2 text-sm leading-6 text-muted-foreground">
                 {product.details.map((detail, index) => (
                   <li key={index} className="flex items-start gap-2">
-                    <span className="mt-1.5 h-1 w-1 flex-shrink-0 rounded-full bg-muted-foreground" />
+                    <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-muted-foreground" />
                     <span>{detail}</span>
                   </li>
                 ))}

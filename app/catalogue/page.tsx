@@ -10,7 +10,7 @@ import { Header, Footer, WhatsAppButton } from '@/components/layout'
 import { CartDrawer } from '@/components/cart'
 import { ProductCard } from '@/components/products'
 import { Toast } from '@/components/ui'
-import { useCart } from '@/lib/hooks'
+import { useCart } from '@/lib/contexts/CartContext'
 import { products, categories, filterProductsByCategory, searchProducts, sortProducts } from '@/lib/data'
 
 export default function CataloguePage() {
@@ -45,7 +45,7 @@ export default function CataloguePage() {
   
   return (
     <>
-      <Header cartCount={cart.count} onCartClick={() => cart.setIsOpen(true)} />
+      <Header />
       
       <main className="mx-auto max-w-7xl px-5 py-12 lg:px-10">
         {/* En-tête */}

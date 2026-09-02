@@ -31,7 +31,7 @@ const Toast: React.FC<ToastProps> = ({ message, type = 'success', onClose }) => 
     <div
       role="status"
       className={cn(
-        'fixed bottom-5 left-1/2 z-[60] flex -translate-x-1/2 items-center gap-2 px-4 py-3 text-sm shadow-lg',
+        'fixed bottom-5 left-1/2 z-60 flex -translate-x-1/2 items-center gap-2 px-4 py-3 text-sm shadow-lg',
         styles[type]
       )}
     >
