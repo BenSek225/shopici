@@ -180,7 +180,7 @@ export const Footer: React.FC = () => {
           <p>
             Developed by{' '}
             <a
-              href="https://sekongo-bienvenu.vercel.app/"
+              href="https://bendev.site/"
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium text-foreground transition-colors hover:text-primary hover:underline"
